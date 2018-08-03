@@ -19,7 +19,7 @@ function setup() {
 }
 
 function draw() {
-    background(51);
+    background(255);
     drawHUD();
     runner.draw();
     handleLevel(frameCount);
@@ -28,12 +28,13 @@ function draw() {
 }
 
 function drawHUD() {
-    stroke(255);
+    stroke(83, 83, 83);
     strokeWeight(2);
     line(0, horizon, width, horizon);
 
     noStroke();
-    text("Score: " + score, width/2, 30);
+    fill(83, 83, 83);
+    text(score, width - 15, 30);
 }
 
 function handleObstacles() {
@@ -92,6 +93,7 @@ function keyReleased(){
 function endGame(){
     noLoop();
     noStroke();
+    fill(83, 83, 83);
     textSize(40);
     text("GAME OVER", width/2, height/2);
     textSize(20);
